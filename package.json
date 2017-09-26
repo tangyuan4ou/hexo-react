@@ -2,37 +2,41 @@
   "name": "hexo-react",
   "version": "1.0.0",
   "description": "hexo-react",
-  "main": "gulpfile.js",
+  "main": "index.jsx",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
     "webpack": "webpack -d --watch --color",
-    "start": "webpack-dev-server --content-base ./assets --color",
-    "release": "set NODE_ENV='production' && webpack -d --color "
+    "start": "webpack-dev-server --content-base ./assets --color"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tangyuan4ou/hexo-react.git"
+    "type": "",
+    "url": ""
   },
   "keywords": [
-    "hexo-react"
+    "react"
   ],
   "author": "tangyuan4ou",
   "license": "ISC",
+  "homepage": "",
   "devDependencies": {
     "autoprefixer": "^6.6.1",
-    "babel": "^6.23.0",
-    "babel-core": "^6.23.1",
+    "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.3.2",
+    "babel-loader": "^6.2.10",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
+    "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.16.0",
     "better-assert": "^1.0.2",
     "bower-webpack-plugin": "^0.1.9",
@@ -40,23 +44,25 @@
     "connect-livereload": "^0.6.0",
     "css-loader": "^0.26.1",
     "cssmin": "^0.4.3",
+    "dateformat": "^1.0.12",
     "eslint": "^3.12.2",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.8.0",
     "express": "^4.14.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
-    "html-webpack-plugin": "^2.28.0",
     "minimist": "^1.2.0",
     "node-sass": "^4.5.0",
     "postcss-loader": "^1.2.2",
     "postcss-smart-import": "^0.6.7",
+    "precss": "^1.4.0",
     "react-hot-loader": "^1.3.1",
-    "sass-loader": "^6.0.2",
+    "react-lazyload": "^2.2.1",
+    "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "compass-mixins": "^0.12.10",
@@ -65,13 +71,18 @@
     "postcss-scss": "^0.4.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "^3.0.2",
+    "react-lazyload": "^2.2.0",
     "react-redux": "^5.0.2",
+    "react-router": "^3.0.2",
+    "react-slick": "^0.14.6",
+    "react-swipe": "^5.0.6",
     "redux": "^3.6.0",
     "redux-action-tools": "^1.2.0",
     "redux-logger": "^2.8.1",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
+    "slick-carousel": "^1.6.0",
+    "swipe-js-iso": "^2.0.3",
     "symbol-observable": "^1.0.2",
     "whatwg-fetch": "^2.0.2"
   }
