@@ -17,6 +17,7 @@ import { Router, Route, hashHistory, IndexRoute, browserHistory } from 'react-ro
 
 import Home from './route/homeContainer.jsx'
 import About from './route/aboutContainer.jsx'
+import Archives from './route/archivesContainer.jsx'
 import Message from './route/messageContainer.jsx'
 
 import './sass/global.scss'
@@ -28,6 +29,7 @@ render(
 			<Route path='/' component={Home} />
 			<Route path='home' component={Home} />
 			<Route path='about' component={About} />
+			<Route path='archives' component={Archives} />
 			<Route path='contact' component={Message} />
 		</Router>,
 		document.getElementById("app")

@@ -2,32 +2,34 @@ import './../sass/moddle/menu.scss'
 
 import React,{ Component } from 'react'
 import { Link } from 'react-router'
-import $ from './../public/js/jquery.js'
+
+var time
 
 class CommonMenu extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
       height: window.innerHeight + 'px',
-      mA: true
+      mA: true,
     }
   }
 
-  componentDidUpdate(nextProps) {
-    let this_ = this
-    let time
-    if (this.props.menuBtn !== true) {
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.menuBtn !== true) {
       clearTimeout(time)
-      $('.menu-wrapper').addClass('display')
+      this.refs.menuWrapper.className = 'menu-wrapper display'
       time = setTimeout(()=>{
-        this_.setState({
-          mA: this_.props.menuBtn
+        this.setState({
+          mA: nextProps.menuBtn
         })
-      }, 500)
+      }, 200)
     } else {
       clearTimeout(time)
+      this.setState({
+        mA: nextProps.menuBtn
+      })
       time = setTimeout(()=>{
-        $('.menu-wrapper').removeClass('display')
+        this.refs.menuWrapper.className = 'menu-wrapper'
       }, 2500)
     }
   }
@@ -35,7 +37,7 @@ class CommonMenu extends Component {
   render() {
     
     return(
-      <div className="menu-wrapper">
+      <div ref="menuWrapper" className="menu-wrapper" style={{height: this.state.height}}>
         <div 
           className={`list one r-one ${this.state.mA ? '' : 'a-one t'}`}
           style={{
@@ -43,7 +45,7 @@ class CommonMenu extends Component {
             lineHeight: this.state.height,
           }} 
         >
-          <Link to="home">home</Link>
+          <Link ref="aa" to="home">home</Link>
         </div>
         <div 
           className={`list two r-two ${this.state.mA ? '' : 'a-two t'}`}

@@ -25,7 +25,7 @@ class Home extends Component {
       var home = (
         <div className="page">
           <Canvas />
-          <Navgation />
+          <Navgation color={'#000000'} write={false} />
         </div>
       )
     }

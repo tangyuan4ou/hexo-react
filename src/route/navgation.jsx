@@ -11,9 +11,9 @@ class Navgation extends Component {
     super()
     this.state = {
       menuBtn: true,
-      inputWidth: true
+      inputWidth: true,
+      href: window.location.href
     }
-    
   }
 
   componentDidMount() {
@@ -33,11 +33,17 @@ class Navgation extends Component {
 
   render() {
     return (
-      <div>
-        <CommonMenu menuBtn={this.state.menuBtn} />
+      <div className="navContainer">
+        <CommonMenu href={this.state.href} menuBtn={this.state.menuBtn} />
         <nav className="menu-section">
           <div className="nav">
-            <span className="name" style={{display: this.state.menuBtn ? 'block' : 'none'}}>Hi friend</span>
+            <span 
+              className="name" 
+              style={{
+                display: this.state.menuBtn ? 'block' : 'none',
+                color: this.props.color
+              }}
+            >Hi friend</span>
             <div className="searchContainer">
               <input 
                 id="search" 
@@ -46,13 +52,17 @@ class Navgation extends Component {
                 placeholder="search..." 
                 style={{
                   width: this.state.inputWidth ? '0px' : '350px',
-                  display: this.state.menuBtn ? 'block' : 'none'
+                  display: this.state.menuBtn ? 'block' : 'none',
+                  borderColor: this.props.color
                 }}  
               />
               <div 
                 className="searchBtn"
                 onClick={event => this.handleInput(event)}
-                style={{display: this.state.menuBtn ? 'block' : 'none'}}
+                style={{
+                  display: this.state.menuBtn ? 'block' : 'none',
+                  color: this.props.color
+                }}
               >
                 <i className="iconfont icon-sousuo"></i>
               </div>
@@ -60,9 +70,9 @@ class Navgation extends Component {
                 className={`menu-toggle ${this.state.menuBtn ? '' : 'on'}`}
                 onClick={event => this.handleMenu(event)}
               >
-                <div className="navBtn one"></div>
-                <div className="navBtn two"></div>
-                <div className="navBtn three"></div>
+                <div className={`navBtn one ${this.props.write ? 'navBtn-w' : '' }`}></div>
+                <div className={`navBtn two ${this.props.write ? 'navBtn-w' : '' }`}></div>
+                <div className={`navBtn three ${this.props.write ? 'navBtn-w' : '' }`}></div>
               </div>
             </div>
           </div>

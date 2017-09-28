@@ -1,0 +1,42 @@
+.des-content {
+  width: 100%;
+  height: 100%;
+  padding: 70px 0 30px;
+  background: #161823;
+  animation: dA 2s ease 5s forwards;
+  p {
+    width: 100%;
+    height: 18px;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #606060;
+    opacity: 0;
+    line-height: 0px;
+    transition: all 1.5s ease;
+  }
+  .year {
+    margin: 0px 0 20px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #9B989F;
+  }
+  .img {
+    width: 200px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 2.5s ease;
+    img {
+      width: 100%;
+    }
+  }
+  .pA {
+    opacity: 1;
+    line-height: 5px;
+  }
+}
+@keyframes dA {
+  to {
+    background: #E9F1F6;
+  }
+}

@@ -1,0 +1,15 @@
+.archivesContainer {
+  width: 100%;
+  min-width: 1210px;
+  padding: 5px 0 5px;
+  background: #161823;
+  .wrapper {
+    margin: 5px;
+    padding-top: 45px;
+    border: 1px solid #E9F1F6;
+    .content {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+}

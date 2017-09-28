@@ -1,38 +1,72 @@
-.page {
+.aboutContainer {
   width: 100%;
-}
-.about-page {
-  //width: 100%;
-  padding: 80px 10%;
-  background: #000;
-  opacity: 0.5;
-  color: #fff;
-  .title {
-    text-align: center;
-    font-size: 40px;
+  padding: 60px 0;
+  background: #161823;
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
   }
-  .conent-left {
-    float: left;
-    margin-top: 100px;
-    width: 16%;
-    border-radius: 50%;
-    opacity: 1;
-  }
-  .conent-right {
-    margin-top: 40px;
-    width: 66%;
-    float: left;
-    text-align: center;
-    h2 {
-      line-height: 30px;
-      margin-bottom: 30px;
-      font-size: 26px;
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .b {
+      position: absolute;
+      top: 0;left: 0;
+      width: 100%;
+      height: 100%;
     }
-    p {
-      line-height: 30px;
-      font-size: 16px;
+    .top {
+      width: 0;
+      border-top: 1px solid #ffffff;
+    }
+    .right {
+      height: 0;
+      border-right: 1px solid #ffffff;
+    }
+    .bottom {
+      width: 0;
+      left: 100%;
+      border-bottom: 1px solid #ffffff;
+    }
+    .left {
+      height: 0;
+      top: 100%;
+      border-left: 1px solid #ffffff;
+    }
+    .t-a {
+      animation: tA 1s ease forwards;
+    }
+    @keyframes tA {
+      to {
+        width: 100%;
+      }
+    }
+    .r-a {
+      animation: rA 1s ease forwards;
+    }
+    @keyframes rA {
+      to {
+        height: 100%;
+      }
+    }
+    .b-a {
+      animation: bA 1s ease forwards;
+    }
+    @keyframes bA {
+      to {
+        left: 0;
+        width: 100%;
+      }
+    }
+    .l-a {
+      animation: lA 1s ease forwards;
+    }
+    @keyframes lA {
+      to {
+        top: 0;
+        height: 100%;
+      }
     }
   }
 }
-
-
