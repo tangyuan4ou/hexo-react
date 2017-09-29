@@ -1,6 +1,6 @@
 .archivesContainer {
   width: 100%;
-  min-width: 1210px;
+  min-width: 1010px;
   padding: 5px 0 5px;
   background: #161823;
   .wrapper {
@@ -8,8 +8,116 @@
     padding-top: 45px;
     border: 1px solid #E9F1F6;
     .content {
-      width: 1200px;
+      width: 1000px;
       margin: 0 auto;
+    }
+    .year {
+      margin-bottom: 10px;
+      font-size: 35px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .block {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 400px;
+      margin: 0 16px;
+      .border {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;left: 0;
+      }
+      .t {
+        border-top: 1px solid #E9F1F6;
+      }
+      .r {
+        border-right: 1px solid #E9F1F6;
+      }
+      .b {
+        border-bottom: 1px solid #E9F1F6;
+      }
+      .l {
+        border-left: 1px solid #E9F1F6;
+      }
+      .t-a {
+        animation: tA 1s ease forwards;
+      }
+      @keyframes tA {
+        50% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .r-a {
+        animation: rA 1s ease forwards;
+      }
+      @keyframes rA {
+        50% {
+          height: 0;
+        }
+        100% {
+          height: 100%;
+        }
+      }
+      .b-a {
+        animation: bA 1s ease forwards;
+      }
+      @keyframes bA {
+        50% {
+          left: 100%;
+          width: 0;
+        }
+        100% {
+          left: 0;
+          width: 100%;
+        }
+      }
+      .l-a {
+        animation: lA 1s ease forwards;
+      }
+      @keyframes lA {
+        50% {
+          top: 100%;
+          height: 0;
+        }
+        100% {
+          top: 0;
+          height: 100%;
+        }
+      }
+      .des {
+        position: absolute;
+        top: 2px;left: 2px;
+        width: 237px;
+        height: 357px;
+        padding: 20px 30px;
+        background: rgba(233, 241, 246, 1);
+        color: #65626b;
+        transition: background 1.5s ease 0.5s;
+        
+      }
+      .des-a {
+        background: rgba(233, 241, 246, 0);
+      }
+      .title {
+        padding: 70px 0 0;
+        text-align: center;
+        height: 200px;
+        font-size: 24px;
+      }
+      .date {
+        margin: 20px 0;
+      }
+      .blockLink {
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

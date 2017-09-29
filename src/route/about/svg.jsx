@@ -1,4 +1,4 @@
-import './../sass/moddle/svg.scss'
+import './../../sass/moddle/svg.scss'
 
 import React, { Component } from 'react'
 

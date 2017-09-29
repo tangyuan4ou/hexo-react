@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import './../sass/moddle/home.scss'
+import './../../sass/moddle/home.scss'
 
 import Canvas from './canvas.jsx'
-import Navgation from './navgation.jsx'
+import Navgation from './../navgation.jsx'
 
 class Home extends Component {
   constructor() {
@@ -25,7 +25,7 @@ class Home extends Component {
       var home = (
         <div className="page">
           <Canvas />
-          <Navgation color={'#000000'} write={false} />
+          <Navgation name={'hi friend'} color={'#000000'} write={false} />
         </div>
       )
     }

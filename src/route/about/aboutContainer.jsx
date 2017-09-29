@@ -1,8 +1,8 @@
-import './../sass/moddle/about.scss'
+import './../../sass/moddle/about.scss'
 
 import React, { Component } from 'react'
 
-import Navgation from './navgation.jsx'
+import Navgation from './../navgation.jsx'
 import Svg from './svg.jsx'
 import Describe from './aboutDes.jsx'
 
@@ -30,7 +30,7 @@ class About extends Component {
             <Svg />
             <Describe />
           </div>
-        <Navgation color={'#ffffff'} write={true}/>
+        <Navgation name={'tangyuan'} color={'#ffffff'} write={true}/>
         </div>
       </section>
     )

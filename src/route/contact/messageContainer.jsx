@@ -1,9 +1,8 @@
-import './../sass/moddle/message.scss'
+import './../../sass/moddle/message.scss'
 
 import React, { Component } from 'react'
-import $ from './../public/js/jquery.js'
 
-import Navgation from './navgation.jsx'
+import Navgation from './../navgation.jsx'
 import MessageForm from './messageForm.jsx'
 
 class Message extends Component {

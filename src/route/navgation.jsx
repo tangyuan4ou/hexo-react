@@ -43,7 +43,7 @@ class Navgation extends Component {
                 display: this.state.menuBtn ? 'block' : 'none',
                 color: this.props.color
               }}
-            >Hi friend</span>
+            >{this.props.name}</span>
             <div className="searchContainer">
               <input 
                 id="search" 

@@ -1,4 +1,4 @@
-import './../sass/moddle/aboutDes.scss'
+import './../../sass/moddle/aboutDes.scss'
 
 import React, { Component } from 'react'
 
@@ -20,6 +20,7 @@ class Describe extends Component {
       p = this.refs.div.children
       top = document.body.getBoundingClientRect().top
       for (let i in p) {
+
         if ( -top + 850 > p[i].offsetTop ) {
           if ( p[i].className == 'year' ||  p[i].className == 'img' ) {
             p[i].className += ' pA'
@@ -84,7 +85,7 @@ class Describe extends Component {
         <p>呵呵</p>
         <p>我相信我可以</p>
         <div className="img">
-          <img src={require('./../public/img/header.jpg')} />
+          <img src={require('./../../public/img/header.jpg')} />
         </div>
         <p>以上</p>
         <p>感谢阅读</p>
