@@ -1,3 +1,5 @@
+import './../../sass/moddle/paginator.scss'
+
 import React,{ Component } from 'react'
 
 class Paginator extends Component {
@@ -10,7 +12,13 @@ class Paginator extends Component {
 
   render() {
     return (
-      <div></div>
+      <div className="pagContainer">
+        <div className="piece prev">Prev</div>
+        <div className="piece">1</div>
+        <div className="piece elipsis">...</div>
+        <div className="piece">2</div>
+        <div className="piece next">Next</div>
+      </div>
     )
   }
 

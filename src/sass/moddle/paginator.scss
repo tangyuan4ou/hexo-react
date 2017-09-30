@@ -1,0 +1,20 @@
+.pagContainer {
+  padding-left: 30px;
+  .piece {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #E9F1F6;
+    margin: 10px;
+    color: #ffffff;
+    background: rgba(233, 241, 246, 0);
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.8s ease;
+    cursor: pointer;
+    &:hover {
+      color: #000000;
+      background: rgba(233, 241, 246, 1);
+    }
+  }
+}

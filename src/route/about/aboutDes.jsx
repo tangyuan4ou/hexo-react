@@ -23,7 +23,7 @@ class Describe extends Component {
 
         if ( -top + 850 > p[i].offsetTop ) {
           if ( p[i].className == 'year' ||  p[i].className == 'img' ) {
-            p[i].className += ' pA'
+            p[i].classList.add('pA')
           } else if ( p[i].className == ''  ) {
             p[i].className = 'pA'
           }

@@ -17,7 +17,7 @@ class CommonMenu extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.menuBtn !== true) {
       clearTimeout(time)
-      this.refs.menuWrapper.className = 'menu-wrapper display'
+      this.refs.menuWrapper.classList.add('display')
       time = setTimeout(()=>{
         this.setState({
           mA: nextProps.menuBtn
@@ -29,7 +29,7 @@ class CommonMenu extends Component {
         mA: nextProps.menuBtn
       })
       time = setTimeout(()=>{
-        this.refs.menuWrapper.className = 'menu-wrapper'
+        this.refs.menuWrapper.classList.remove('display')
       }, 2500)
     }
   }

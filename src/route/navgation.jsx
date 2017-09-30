@@ -12,7 +12,6 @@ class Navgation extends Component {
     this.state = {
       menuBtn: true,
       inputWidth: true,
-      href: window.location.href
     }
   }
 
@@ -34,7 +33,7 @@ class Navgation extends Component {
   render() {
     return (
       <div className="navContainer">
-        <CommonMenu href={this.state.href} menuBtn={this.state.menuBtn} />
+        <CommonMenu menuBtn={this.state.menuBtn} />
         <nav className="menu-section">
           <div className="nav">
             <span 

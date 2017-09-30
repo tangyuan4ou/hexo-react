@@ -1,8 +1,8 @@
 .svg {
   margin: 50px 100px;
   .draw {
-    stroke-dasharray: 1310;
-    stroke-dashoffset: 1310;
+    stroke-dasharray: 1310; //定义描边的虚线长度,如果是单数自动复制变成偶数
+    stroke-dashoffset: 1310;  //定义虚线描边的偏移量
     fill: #161823;
     transition: fill 2s ease;
     animation: draw 6s ease 2s forwards;
