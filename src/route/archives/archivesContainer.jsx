@@ -1,6 +1,7 @@
 import './../../sass/moddle/archives.scss'
 
 import React, { Component } from 'react'
+import { createStore } from 'redux'
 
 import Navgation from './../navgation.jsx'
 import Archive from './archive.jsx'

@@ -1,16 +1,7 @@
-/*
-* @Author: o
-* @Date:   2017-02-01 16:38:10
-* @Last Modified by:   o
-* @Last Modified time: 2017-02-03 18:12:31
-*/
-
 'use strict';
-
 
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
 
 import { Router, Route, hashHistory, IndexRoute, browserHistory } from 'react-router'
 
@@ -21,8 +12,6 @@ import Archives from './route/archives/archivesContainer.jsx'
 import Message from './route/contact/messageContainer.jsx'
 
 import './sass/global.scss'
-
-
 
 render(
 		<Router history={hashHistory}>

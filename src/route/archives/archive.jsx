@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Archive extends Component {
   constructor(props){
@@ -24,12 +25,14 @@ class Archive extends Component {
   }
 
   hanleMouseOver(event) {
+    event.preventDefault()
     this.animate(event)
     let blog = event.target.parentNode.children
     blog[4].classList.add('des-a')
   }
 
   handleMouseLeave(event) {
+    event.preventDefault()
     this.animate(event)
     let blog = event.target.parentNode.children
     blog[4].classList.remove('des-a')
@@ -39,7 +42,6 @@ class Archive extends Component {
     return(
       <section className="content">
         <p className="year">✒2017年</p>
-
         <article 
           className="block"
           onMouseOver={event => this.hanleMouseOver(event)}
