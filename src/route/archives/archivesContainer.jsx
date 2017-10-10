@@ -1,12 +1,16 @@
 import './../../sass/moddle/archives.scss'
 
 import React, { Component } from 'react'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import { logger } from './../../redux/middleware'
 
 import Navgation from './../navgation.jsx'
 import Archive from './archive.jsx'
 import Paginator from './paginator.jsx'
 
+const createStoreWithMiddleware = applyMiddleware(
+  logger
+)( createStore )
 
 class Archives extends Component {
   constructor(props) {
