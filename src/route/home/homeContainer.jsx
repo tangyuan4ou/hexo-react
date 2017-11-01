@@ -17,7 +17,8 @@ class Home extends Component {
   render() {
     const userAgent = navigator.userAgent
     console.log(userAgent)
-    if (  userAgent.indexOf('Edge')>0 || userAgent.indexOf('Windows')>0 || userAgent.indexOf('Opera')>0) {
+    if (  userAgent.indexOf('Edge')>0 || userAgent.indexOf('ie')>0 || userAgent.indexOf('Opera')>0) {
+      console.log(userAgent)
       var home = (
           <h1 className="hint">请使用谷歌或者火狐浏览器打开，谢谢^_^</h1>
         )
