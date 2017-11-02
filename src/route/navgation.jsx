@@ -52,7 +52,8 @@ class Navgation extends Component {
                 style={{
                   width: this.state.inputWidth ? '0px' : '350px',
                   display: this.state.menuBtn ? 'block' : 'none',
-                  borderColor: this.props.color
+                  borderColor: this.props.color,
+                  color: this.props.color
                 }}  
               />
               <div 

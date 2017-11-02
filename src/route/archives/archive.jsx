@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router'
 import PropTypes from 'prop-types'
+
+import Blogs from './blog/blogContainer.jsx'
 
 class Archive extends Component {
   constructor(props){
@@ -58,12 +61,10 @@ class Archive extends Component {
               <span className="tag">tangyuan4ou.github.io</span>
             </div>
           </detials>
-          <a className="blockLink" href="javascript">
-            <div></div>
-          </a>
+        <Link to="/blogs" className="blockLink" />
+          
         </article>
-
-        <article 
+        <article
           className="block"
           onMouseOver={event => this.hanleMouseOver(event)} 
           onMouseLeave={event => this.handleMouseLeave(event)}
